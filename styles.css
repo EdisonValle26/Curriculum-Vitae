@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+    --white: #fff;
+    --gray: #333;
+    --golden: rgb(141, 115, 42);
+    --gray-light:rgb(83, 82, 82);
+    --blue-light: #3590d2;    
+}
+
+body {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--white);
+    margin: 50px;
+    box-shadow: 0 50px 75px rgba(0, 0, 0, 0.1);
+    border-left: 50px solid var(--white);   
+    border-right: 50px solid var(--white);
+}
+
+.container .top {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 40px;
+    padding-bottom: 0;
+}
+
+.container .top .imgBx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .top .imgBx .box {
+    position: relative;
+    width: 70%;
+    min-width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.container .top .imgBx .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .top .profileText {
+    position: relative;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.container .top .profileText h3 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.container .contentBox {
+    position: relative;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 40px 40px;
+}
+
+.container .contentBox h3{
+    border-bottom: 2px solid var(--gray-light);
+    line-height: 1em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.container .contentBox h3 i{
+    color: var(--golden);
+}
+
+.container .contentBox .leftSide ul i{
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: var(--blue-light);
+}
+
+.container .contentBox ul {
+    position: relative;
+    margin: 10px 0;
+}
+
+.container .contentBox ul li {
+    list-style: none;
+    line-height: 1em;
+    color: var(--gray);
+    cursor: pointer;
+    display: flex;
+}
+.contentBox .leftSide .contacto li{
+    padding: 10px;
+}
+.contentBox .leftSide .sobreMi{
+    color: var(--gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: justify;
+}
+
+.contentBox .leftSide .referencias span{
+    color: var(--gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: justify;
+    margin-top: 25px;
+}
+
+h4{
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.intereses{
+    font-size: 40px;
+}
+
+.intereses li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.container .contentBox .rightSide{
+    border-left: 2px solid var(--gray-light);
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.container .contentBox .rightSide .exp{
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.container .contentBox .rightSide .expWork h4{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.container .contentBox .rightSide .expWork P{
+    color: var(--gray);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.container .contentBox .rightSide .expWork i{
+    color: var(--golden);
+}
+
+.habilidades .box{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    min-width: 130px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    align-content: center;
+}
+
+.habilidades .box .percent {
+    position: relative;
+    width: 80%;
+    height: 15px;
+    background: var(--gray);
+    top: 90px;
+}
+
+.habilidades .box .percent div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: var(--golden);
+}
+
+.habilidades .box img {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+.habilidades li{
+    gap: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width:900px){
+    .container .contentBox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .contentBox .rightSide{
+        border-left: none;
+    }
+
+}
